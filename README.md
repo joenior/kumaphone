@@ -32,12 +32,10 @@ Lalu tempatkan folder kumaphone pada folder htdocs jika menggunakan XAMPP, atau 
 
 Setelah itu, buatlah database dengan nama 'sbp' lalu import file db_sbp.sql ke database MySQL.
 
-## 💻 Screenshots
-Light mode (System adaptive)
+## 💻 Screenshots (System adaptive)
+Light mode
 ![Light](https://i.ibb.co/4RKJ5cy/Kumaphone-Personal-Microsoft-Edge-Canary-b1.png)
-
-Dark mode
-![App Screenshot](https://i.ibb.co/HVBpdh2/Kumaphone-Personal-Microsoft-Edge-Canary-1-b1.png)
+![Dark](https://i.ibb.co/HVBpdh2/Kumaphone-Personal-Microsoft-Edge-Canary-1-b1.png)
 ## 📑 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
