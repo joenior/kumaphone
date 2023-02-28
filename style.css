@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+:root {
+  --entry-header-height: calc(100vh - 56px);
+  --entry-header-background: #e0e0e0;
+  --entry-footer-background: #e0e0e0;
+  --entry-footer-height: 25vh;
+  --site-footer-color: #999;
+}
+
+* {
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 200vh;
+}
+
+.site-footer {
+  color: var(--site-footer-color);
+  font-size: 0.85rem;
+}
+.site-footer .card {
+  color: inherit;
+  background: transparent;
+}
+.site-footer .card .card-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.site-footer .card .card-body ul {
+  margin-left: 0;
+}
+
+.hentry .entry-header {
+  background-color: var(--entry-header-background);
+  display: flex;
+  flex-flow: column no-wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--entry-header-height);
+}
+.hentry .entry-content {
+  min-height: 100vh;
+}
+.hentry .entry-footer .publish-on,
+.hentry .entry-footer .writer {
+  font-size: 0.85rem;
+}
+
+.social-media span {
+  display: none;
+}
+
+.entry-header {
+  background-image: url("https://i.ibb.co/TtsbP0k/glass-1513692655.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.starter-template {
+  color: #e0e0e0;
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+          backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.233);
+  border-radius: 1rem;
+  border: 3px solid rgba(102, 58, 0, 0.3);
+  box-shadow: -3px -3px 18px rgba(0, 77, 153, 0.3), 3px 3px 18px rgba(0, 26, 51, 0.7);
+}
+
+.modal-dialog {
+  background: transparent;
+  border-radius: 1rem;
+}
+.modal-dialog .modal-content {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.473);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px) saturate(180%);
+  -webkit-backdrop-filter: blur(6px) saturate(180%);
+  border: 1px solid rgba(0, 51, 102, 0.8);
+}
+.modal-dialog .modal-content .modal-header {
+  background: transparent;
+  border: none;
+}
+.modal-dialog .modal-content .modal-header .modal-title {
+  color: #fafafa;
+}
+.modal-dialog .modal-content .modal-body {
+  color: #fafafa;
+}
+.modal-dialog .modal-content .modal-footer {
+  background: transparent;
+  border: none;
+}
