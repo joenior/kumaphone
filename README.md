@@ -40,11 +40,11 @@ Setelah itu, buatlah database dengan nama 'sbp' lalu import file db_sbp.sql ke d
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
-## 😎 Demo
+## 😎 Author
 
+- Fullstack Developer - [Steven J. Naibaho](https://github.com/joenior)
+- Frontend Developer - [Rizki Febryano](https://github.com/febryano)
 
-[Preview](https://kumaphone.my.id)
-[Hosted by IjulHost]
 
 ## 🤔 Support
 
