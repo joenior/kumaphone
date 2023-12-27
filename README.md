@@ -35,13 +35,15 @@ Setelah itu, buatlah database dengan nama 'sbp' lalu import file db_sbp.sql ke d
 ## 💻 Screenshots (System adaptive)
 ![Light](https://i.ibb.co/4RKJ5cy/Kumaphone-Personal-Microsoft-Edge-Canary-b1.png)
 ![Dark](https://i.ibb.co/HVBpdh2/Kumaphone-Personal-Microsoft-Edge-Canary-1-b1.png)
-## 📑 License
 
+## 🖱️ Live Preview
+![Click here](https://zardall.pw/)
+
+## 📑 License
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
 ## 😎 Author
-
 - Fullstack Developer - [Steven J. Naibaho](https://github.com/joenior)
 - Frontend Developer - [Rizki Febryano](https://github.com/febryano)
 
