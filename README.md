@@ -37,7 +37,7 @@ Setelah itu, buatlah database dengan nama 'sbp' lalu import file db_sbp.sql ke d
 ![Dark](https://i.ibb.co/HVBpdh2/Kumaphone-Personal-Microsoft-Edge-Canary-1-b1.png)
 
 ## 🖱️ Live Preview
-[Click here](https://zardall.pw/)
+[Click here](https://zardall.pw)
 
 ## 📑 License
 [MIT](https://choosealicense.com/licenses/mit/)
