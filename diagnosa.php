@@ -88,115 +88,138 @@ body {
     </li>
   </ol>
 </nav>
-<!--   Akhir bagian Menu pada Header -->
 <section class="bg-white dark:bg-gray-900 ">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
-      <div class="mx-auto max-w-screen-sm mb-8 lg:mb-16">
-     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-    <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-           Diagnosa Kerusakan
-           <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Berikut adalah sparepart yang harus diganti atau tindakan perbaikan yang harus dilakukan untuk memperbaiki kerusakan</p>
-        </caption>
-        <center>
-
-</center>
-       <br>
+      <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <form id="form2" name="form2" method="post" action="diagnosa.php">
-        <div class="w-full p-4 bg-white border rounded-lg shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Form Smartphone</h5>
+        <div class="w-full p-4 sm:p-6 md:p-8 lg:p-10 bg-white border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Form Smartphone</h5>
   <div class="mb-6">
     <label for="text" class="block mb-2 text-sm text-left font-medium text-gray-900 dark:text-white">Nama customer</label>
-    <input type="text" id="brand" name="brand" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+    <input type="text" id="brand" name="brand" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
   </div>
   <div class="mb-6">
     <label for="text" class="block mb-2 text-sm text-left font-medium text-gray-900 dark:text-white">Brand & model smartphone</label>
-    <input type="text" id="model" name="model" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+    <input type="text" id="model" name="model" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
   </div>
   <div class="mb-6">
     <label for="text" class="block mb-2 text-sm text-left font-medium text-gray-900 dark:text-white">IMEI smartphone</label>
-    <input type="text" id="imei" name="imei" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+    <input type="text" id="imei" name="imei" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
   </div>
   <label for="text" class="block mb-2 text-sm text-left font-medium text-gray-900 dark:text-white">Sistem Operasi</label>
-				<select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="submit" name="jenishp" id="jenishp">
+				<select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="submit" name="jenishp" id="jenishp">
 				<option>Pilih</option>
                 <option>Android</option>
   		</select>
-      <br/>
+      
       <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
   
       <?php 
               global $hasil;
 if(isset($_POST['submit'])){
-$brand = $_POST['brand'];
-$model = $_POST['model'];
-$imei = $_POST['imei'];
-$jenishp = $_POST['jenishp'];
-$sql = "INSERT INTO smartphones (brand, model, imei, jenishp, idkerusakan) VALUES ('$brand', '$model', '$imei','$jenishp','$hasil')";
-if (mysqli_query($konek_db, $sql)) {
-echo "";
-} else {
-echo "Error: " . $sql . "<br>" . mysqli_error($konek_db);
-}
+    $brand = $_POST['brand'];
+    $model = $_POST['model'];
+    $imei = $_POST['imei'];
+    $jenishp = $_POST['jenishp'];
+    $gejala = $_POST['gejala'];
 
+    // Initialize an empty array to store idkerusakan
+    $idkerusakanList = [];
+
+    // Loop through each selected symptom
+    foreach($gejala as $selectedGejala) {
+        // Query to find idkerusakan based on the selected symptoms
+        $query = "SELECT DISTINCT p.idkerusakan FROM basispengetahuan b, kerusakan p WHERE b.gejala='$selectedGejala' AND p.namakerusakan=b.namakerusakan";
+        $result = mysqli_query($konek_db, $query);
+
+        // Fetch the result and store idkerusakan
+        while($row = mysqli_fetch_array($result)) {
+            $idkerusakanList[] = $row['idkerusakan'];
+        }
+    }
+
+    // Use the first idkerusakan found (or handle multiple if needed)
+    $idkerusakan = !empty($idkerusakanList) ? $idkerusakanList[0] : null;
+
+    // Check if idkerusakan is valid before inserting
+    if ($idkerusakan) {
+        $sql = "INSERT INTO smartphones (brand, model, imei, jenishp, idkerusakan) VALUES ('$brand', '$model', '$imei', '$jenishp', '$idkerusakan')";
+        if (mysqli_query($konek_db, $sql)) {
+          echo '<div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+          <span class="font-medium">Data berhasil dicatat!</span> Silahkan cek diagnosa pada tabel dibawah.
+        </div>';
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($konek_db);
+        }
+    } else {
+        echo "No valid idkerusakan found for the selected symptoms.";
+    }
 }
       ?>
       	<?php
-            // if(isset($_POST['hp']))
-            //       if($_POST['hp']!="jenishp"){
                 echo  "<label class='mb-2 text-2xl text-left font-bold text-gray-900 dark:text-white'>Ciri Kerusakan<br/><br/></label>";
- 			//$tampil="select * from gejala where jenishp= \"".$_POST['hp']."\"";
       $hp = "Android";
        $tampil="select * from gejala where jenishp= \"".$hp."\"";
 			$query= mysqli_query($konek_db,$tampil);
                 while($hasil=mysqli_fetch_array($query)){
-					echo "<input type='checkbox' class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+					echo "<div class='text-left rtl:text-right'><input type='checkbox' class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
           value='".$hasil['gejala']."' name='gejala[]' />   
-                    <label for='default-checkbox' class='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>".$hasil['gejala']."</label> <br>";
+                    <label for='default-checkbox' class='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>".$hasil['gejala']."</label> <br></div>";
 			// }
                    }
 					?>
 
-
+                 
       <br/>
       <center>
         <button type="submit" name ="submit" onclick="return checkDiagnosa()" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cek Kerusakan</button>
                   </center>
-                <table id="example1" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" class="px-6 py-3">NO</th>
-                            <th scope="col" class="px-6 py-3">ID Kerusakan</th>
-					              		<th scope="col" class="px-6 py-3">Nama Kerusakan</th>
-                            <th scope="col" class="px-6 py-3">Sistem Operasi</th>
-                            <th scope="col" class="px-6 py-3">Detail</th>
-                        </tr>
-                    </thead>
-                             <?php
-        if(isset($_POST['submit'])){
-            $gejala = $_POST['gejala'];
-            $jumlah_dipilih = count($gejala);
-           for($x=0;$x<$jumlah_dipilih;$x++){
-                       $tampil ="select DISTINCT p.idkerusakan, p.namakerusakan, p.jenishp from basispengetahuan b, kerusakan p where b.gejala='$gejala[$x]' and p.namakerusakan=b.namakerusakan group by namakerusakan";
-                       $result = mysqli_query($konek_db, $tampil);
-                       $hasil  = mysqli_fetch_array($result);
+                  <!--   Akhir bagian Menu pada Header -->
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+<section class="bg-white dark:bg-gray-900 ">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+      <div class="mx-auto max-w-screen-sm mb-8 lg:mb-16">
+     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table id="example1" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+            Diagnosa Kerusakan
+            <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Berikut adalah sparepart yang harus diganti atau tindakan perbaikan yang harus dilakukan untuk memperbaiki kerusakan</p>
+        </caption>
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">No</th>
+                <th scope="col" class="px-6 py-3">ID Kerusakan</th>
+                <th scope="col" class="px-6 py-3">Nama Kerusakan</th>
+                <th scope="col" class="px-6 py-3">Sistem Operasi</th>
+                <th scope="col" class="px-6 py-3">Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            if(isset($_POST['submit'])){
+                $gejala = $_POST['gejala'];
+                $jumlah_dipilih = count($gejala);
+                for($x=0; $x<$jumlah_dipilih; $x++){
+                    $tampil = "SELECT DISTINCT p.idkerusakan, p.namakerusakan, p.jenishp FROM basispengetahuan b, kerusakan p WHERE b.gejala='$gejala[$x]' AND p.namakerusakan=b.namakerusakan GROUP BY namakerusakan";
+                    $result = mysqli_query($konek_db, $tampil);
+                    $hasil = mysqli_fetch_array($result);
 
-                    }
-               echo "
-                           <tr>
-        			             <td>".$x."</td>
-                                 <td>".$hasil['idkerusakan']."</td>
-					                       <td>".$hasil['namakerusakan']."</td>
-                                 <td>".$hasil['jenishp']."</td>
-                                 <td><a href=\"hasildiagnosa.php?id=".$hasil['idkerusakan']."\"><i class='bi bi-search'></i></a></td>
-        		          </tr>
-
-                               ";
-        }
-
-                ?>
-
-                    </table>
+                    echo "<tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700'>
+                            <th scope='row' class='px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'>".($x+1)."</th>
+                            <td class='px-6 py-4'>".$hasil['idkerusakan']."</td>
+                            <td class='px-6 py-4'>".$hasil['namakerusakan']."</td>
+                            <td class='px-6 py-4'>".$hasil['jenishp']."</td>
+                            <td class='px-6 py-4 text-right'><a href='hasildiagnosa.php?id=".$hasil['idkerusakan']."'><i class='bi bi-search'></i></a></td>
+                          </tr>";
+                }
+            }
+            ?>
+        </tbody>
+    </table>
             </div>
                     </div>
                 </div>
@@ -240,3 +263,4 @@ select.addEventListener("change", function() {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 </html>
+
