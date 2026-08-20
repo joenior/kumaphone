@@ -1,5 +1,4 @@
-<form action="check.php">
-  <input type="checkbox" name="checkbox" id="checkbox">
-  <input type="submit" value="Submit">
-</form>
-
+<?php
+// Deprecated test file
+header("Location: index.html", true, 301);
+exit;

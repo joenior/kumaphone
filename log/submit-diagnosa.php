@@ -1,29 +1,36 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sbp";
+/**
+ * Submit handler for diagnosis activity log.
+ *
+ * Uses the centralized PDO connection with prepared statements
+ * to prevent SQL injection and ensure consistent error handling.
+ */
+require_once __DIR__ . '/../includes/database.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo "Method Not Allowed";
+    exit;
 }
 
-$nama_user = $_POST['nama_user'];
-$brand = $_POST['brand'];
-$imei = $_POST['imei'];
-$date_log = date('Y-m-d H:i:s');
+$userName = trim($_POST['nama_user'] ?? '');
+$brand    = trim($_POST['brand'] ?? '');
+$imei     = trim($_POST['imei'] ?? '');
+$dateLog  = date('Y-m-d H:i:s');
 
-$sql = "INSERT INTO diagnosa (nama_user, date_log, brand, imei)
-VALUES ('$nama_user', '$date_log', '$brand', '$imei')";
+if (empty($userName) || empty($brand) || empty($imei)) {
+    http_response_code(400);
+    echo "Mohon lengkapi semua data diagnosa.";
+    exit;
+}
 
-if ($conn->query($sql) === TRUE) {
+try {
+    $stmt = $db->prepare("INSERT INTO diagnosa (nama_user, date_log, brand, imei) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$userName, $dateLog, $brand, $imei]);
+
     echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+} catch (PDOException $e) {
+    error_log("Failed to insert diagnosis log: " . $e->getMessage());
+    http_response_code(500);
+    echo "Terjadi kesalahan saat menyimpan log diagnosa.";
 }
-
-$conn->close();
-?>

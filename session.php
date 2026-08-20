@@ -1,16 +1,11 @@
 <?php
-include "koneksi.php";
-session_start();// Starting Session // Storing Session
+/**
+ * Session helper — included by pages that need the admin session.
+ *
+ * This is a thin compatibility shim. New pages should use
+ * includes/auth.php directly.
+ */
+require_once __DIR__ . '/includes/database.php';
+require_once __DIR__ . '/includes/auth.php';
 
-$user_check=$_SESSION['login_user'];
-$sql="select * from admin where username='$user_check'";
-$ses=mysqli_query($konek_db,$sql);
-$row =mysqli_fetch_assoc($ses);
-$login_session =$row['nama'];
-
-if(!isset($_SESSION)){
-    echo"$user_check";
-    
-}
-
-?>
+$login_session = getAdminName($db);
