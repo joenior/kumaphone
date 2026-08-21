@@ -10,6 +10,7 @@ $navItems = [
     ['href' => 'index.html',     'label' => 'Halaman Utama',      'key' => 'home'],
     ['href' => 'kerusakan.php',  'label' => 'Ciri-ciri Kerusakan', 'key' => 'kerusakan'],
     ['href' => 'diagnosa.php',   'label' => 'Diagnosa Kerusakan',  'key' => 'diagnosa'],
+    ['href' => 'tracking.php',   'label' => 'Lacak Status',        'key' => 'tracking'],
     ['href' => 'about.php',      'label' => 'Tentang Kami',        'key' => 'about'],
 ];
 ?>

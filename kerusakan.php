@@ -26,7 +26,7 @@ $damageRecords = fetchAll($db, 'SELECT * FROM kerusakan WHERE jenishp = ?', [$op
         <nav class="nav container" aria-label="Navigasi utama">
             <a class="brand" href="index.html" aria-label="Kumaphone, halaman utama"><img src="img/logo.png" alt="" width="38" height="38"><span>Kumaphone</span><small>beta</small></a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu"><span class="sr-only">Buka menu navigasi</span><span></span><span></span></button>
-            <div class="nav-links" id="primary-menu"><a href="index.html">Beranda</a><a class="active" href="kerusakan.php" aria-current="page">Ciri kerusakan</a><a href="diagnosa.php">Diagnosis</a><a href="about.php">Tentang</a><a class="admin-link" href="login.html">Masuk admin <span aria-hidden="true">↗</span></a></div>
+            <div class="nav-links" id="primary-menu"><a href="index.html">Beranda</a><a class="active" href="kerusakan.php" aria-current="page">Ciri kerusakan</a><a href="diagnosa.php">Diagnosis</a><a href="tracking.php">Lacak status</a><a href="about.php">Tentang</a><a class="admin-link" href="login.html">Masuk admin <span aria-hidden="true">↗</span></a></div>
         </nav>
     </header>
     <main id="content">

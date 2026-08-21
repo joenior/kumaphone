@@ -1,4 +1,4 @@
-/* The hero illustration already contains a phone bezel; preserve its 523 × 803 ratio. */
+/* The hero illustration already contains a phone bezel; preserve its 523 x 803 ratio. */
 .phone-frame {
   right: 7%;
   top: 1.5rem;
@@ -11,6 +11,8 @@
   background: transparent;
   box-shadow: none;
   filter: drop-shadow(30px 32px 30px rgba(13, 27, 42, .2));
+  animation: phoneFloat 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 .phone-frame img {
@@ -20,12 +22,15 @@
   object-position: center;
 }
 
-.phone-top { display: none; }
+.phone-top {
+  display: none;
+}
 
 .scan-line {
   top: 41%;
   left: 8%;
   width: 84%;
+  pointer-events: none;
 }
 
 @media (max-width: 760px) {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Kumaphone membantu teknisi mengenali gejala kerusakan smartphone Android dan menelusuri solusi yang relevan.">
     <meta name="theme-color" content="#0d1b2a">
-    <title>Kumaphone — Diagnosis kerusakan smartphone</title>
+    <title>Kumaphone - Diagnosis kerusakan smartphone</title>
     <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,23 +15,231 @@
   </head>
   <body>
     <a class="skip-link" href="#content">Langsung ke konten</a>
+    
     <header class="site-header">
       <nav class="nav container" aria-label="Navigasi utama">
-        <a class="brand" href="index.html" aria-label="Kumaphone, halaman utama"><img src="img/logo.png" alt="" width="38" height="38"><span>Kumaphone</span><small>beta</small></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu"><span class="sr-only">Buka menu navigasi</span><span></span><span></span></button>
-        <div class="nav-links" id="primary-menu"><a class="active" href="index.html" aria-current="page">Beranda</a><a href="kerusakan.php">Ciri kerusakan</a><a href="diagnosa.php">Diagnosis</a><a href="about.php">Tentang</a><a class="admin-link" href="login.html">Masuk admin <span aria-hidden="true">↗</span></a></div>
+        <a class="brand" href="index.html" aria-label="Kumaphone, halaman utama">
+          <img src="img/logo.png" alt="" width="38" height="38">
+          <span>Kumaphone</span>
+          <small>beta</small>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="sr-only">Buka menu navigasi</span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="primary-menu">
+          <a class="active" href="index.html" aria-current="page">Beranda</a>
+          <a href="kerusakan.php">Ciri kerusakan</a>
+          <a href="diagnosa.php">Diagnosis</a>
+          <a href="tracking.php">Lacak status</a>
+          <a href="about.php">Tentang</a>
+          <a class="admin-link" href="login.html">Masuk admin <span aria-hidden="true">↗</span></a>
+        </div>
       </nav>
     </header>
+
     <main id="content">
-      <section class="hero"><div class="hero-glow"></div><div class="container hero-grid">
-        <div class="hero-copy"><p class="eyebrow"><span></span>Sistem pakar untuk teknisi</p><h1>Temukan arah perbaikan, <em>bukan sekadar</em> tebakan.</h1><p class="lede">Kumaphone membaca gejala yang Anda temukan pada smartphone Android dan menyusunnya menjadi kemungkinan kerusakan serta langkah pemeriksaan awal.</p><div class="hero-actions"><a class="button button-primary" href="/kumaphone/diagnosa.php">Mulai diagnosis <span aria-hidden="true">→</span></a><a class="text-link" href="kerusakan.php">Lihat daftar gejala <span aria-hidden="true">↗</span></a></div><dl class="hero-notes"><div><dt>Berbasis gejala</dt><dd>Penalaran forward chaining</dd></div><div><dt>Untuk Android</dt><dd>Pemeriksaan awal yang terarah</dd></div></dl></div>
-        <div class="hero-art" aria-hidden="true"><div class="signal signal-one"></div><div class="signal signal-two"></div><div class="phone-frame"><div class="phone-top"></div><img src="img/illustration-intro.png" alt=""><div class="scan-line"></div></div><div class="diagnostic-card"><span class="card-dot"></span><p>Memeriksa gejala</p><strong>Analisis siap dimulai</strong><div class="progress"><i></i></div></div></div>
-      </div></section>
-      <section class="how-it-works section"><div class="container"><div class="section-heading"><p class="eyebrow"><span></span>Cara kerja</p><h2>Dari keluhan ke langkah pemeriksaan yang lebih jelas.</h2></div><div class="steps"><article><b>01</b><h3>Pilih gejala</h3><p>Tandai kondisi yang benar-benar terlihat pada perangkat yang diperiksa.</p></article><article><b>02</b><h3>Telusuri aturan</h3><p>Sistem mencocokkan jawaban dengan basis pengetahuan yang tersedia.</p></article><article><b>03</b><h3>Dapatkan arahan</h3><p>Baca kemungkinan kerusakan dan tindakan awal yang disarankan.</p></article></div></div></section>
-      <section class="knowledge section"><div class="container knowledge-grid"><div><p class="eyebrow"><span></span>Basis pengetahuan</p><h2>Mulai dari gejala yang paling dekat dengan kondisi perangkat.</h2><p class="body-copy">Gunakan daftar ciri kerusakan untuk memahami istilah dan mengecek tanda-tanda sebelum menjalankan diagnosis.</p><a class="button button-dark" href="kerusakan.php">Jelajahi ciri kerusakan <span aria-hidden="true">→</span></a></div><div class="symptom-list"><div><span>01</span><p>Layar tidak merespons</p><i>+</i></div><div><span>02</span><p>Perangkat cepat panas</p><i>+</i></div><div><span>03</span><p>Baterai terkuras cepat</p><i>+</i></div><div><span>04</span><p>Gagal mengisi daya</p><i>+</i></div></div></div></section>
-      <section class="faq section" aria-labelledby="faq-title"><div class="container faq-grid"><div><p class="eyebrow"><span></span>Yang perlu diketahui</p><h2 id="faq-title">Pertanyaan umum.</h2><p class="body-copy">Kumaphone membantu proses identifikasi awal. Hasilnya dapat dipakai sebagai panduan pemeriksaan, bukan pengganti pemeriksaan fisik.</p></div><div class="faq-list"><details open><summary>Bagaimana cara memulai diagnosis?<span>+</span></summary><p>Pilih menu Diagnosis, lalu jawab pertanyaan berdasarkan gejala yang benar-benar Anda temukan pada perangkat.</p></details><details><summary>Apakah semua kerusakan bisa dikenali?<span>+</span></summary><p>Basis pengetahuan terus dikembangkan. Hasil terbaik diperoleh ketika gejala yang dipilih sesuai dengan kondisi perangkat.</p></details><details><summary>Apakah Kumaphone dapat digunakan gratis?<span>+</span></summary><p>Ya. Anda dapat menggunakan fitur diagnosis sebagai panduan awal tanpa biaya.</p></details></div></div></section>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span>Sistem pakar untuk teknisi</p>
+            <h1>Temukan arah perbaikan, <em>bukan sekadar</em> tebakan.</h1>
+            <p class="lede">Kumaphone membaca gejala yang Anda temukan pada smartphone Android dan menyusunnya menjadi kemungkinan kerusakan serta langkah pemeriksaan awal.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="/kumaphone/diagnosa.php">Mulai diagnosis <span aria-hidden="true">→</span></a>
+              <a class="text-link" href="kerusakan.php">Lihat daftar gejala <span aria-hidden="true">↗</span></a>
+            </div>
+            <dl class="hero-notes">
+              <div>
+                <dt>Berbasis gejala</dt>
+                <dd>Penalaran forward chaining</dd>
+              </div>
+              <div>
+                <dt>Untuk Android</dt>
+                <dd>Pemeriksaan awal yang terarah</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="signal signal-one"></div>
+            <div class="signal signal-two"></div>
+            <div class="phone-frame">
+              <div class="phone-top"></div>
+              <img src="img/illustration-intro.png" alt="Ilustrasi diagnosis smartphone Kumaphone">
+              <div class="scan-line"></div>
+            </div>
+            <div class="diagnostic-card">
+              <span class="card-dot"></span>
+              <p>Memeriksa gejala</p>
+              <strong>Analisis siap dimulai</strong>
+              <div class="progress"><i></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works section" data-reveal>
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow"><span></span>Cara kerja</p>
+            <h2>Dari keluhan ke langkah pemeriksaan yang lebih jelas.</h2>
+          </div>
+          <div class="steps">
+            <article data-reveal style="--reveal-index: 1;">
+              <b>01</b>
+              <h3>Pilih gejala</h3>
+              <p>Tandai kondisi yang benar-benar terlihat pada perangkat yang diperiksa.</p>
+            </article>
+            <article data-reveal style="--reveal-index: 2;">
+              <b>02</b>
+              <h3>Telusuri aturan</h3>
+              <p>Sistem mencocokkan jawaban dengan basis pengetahuan yang tersedia.</p>
+            </article>
+            <article data-reveal style="--reveal-index: 3;">
+              <b>03</b>
+              <h3>Dapatkan arahan</h3>
+              <p>Baca kemungkinan kerusakan dan tindakan awal yang disarankan.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Knowledge Section -->
+      <section class="knowledge section">
+        <div class="container knowledge-grid">
+          <div data-reveal>
+            <p class="eyebrow"><span></span>Basis pengetahuan</p>
+            <h2>Mulai dari gejala yang paling dekat dengan kondisi perangkat.</h2>
+            <p class="body-copy">Gunakan daftar ciri kerusakan untuk memahami istilah dan mengecek tanda-tanda sebelum menjalankan diagnosis.</p>
+            <a class="button button-dark" href="kerusakan.php">Jelajahi ciri kerusakan <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="symptom-list">
+            <div data-reveal style="--reveal-index: 1;">
+              <span>01</span>
+              <p>Layar tidak merespons</p>
+              <i>+</i>
+            </div>
+            <div data-reveal style="--reveal-index: 2;">
+              <span>02</span>
+              <p>Perangkat cepat panas</p>
+              <i>+</i>
+            </div>
+            <div data-reveal style="--reveal-index: 3;">
+              <span>03</span>
+              <p>Baterai terkuras cepat</p>
+              <i>+</i>
+            </div>
+            <div data-reveal style="--reveal-index: 4;">
+              <span>04</span>
+              <p>Gagal mengisi daya</p>
+              <i>+</i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq section" aria-labelledby="faq-title">
+        <div class="container faq-grid">
+          <div data-reveal>
+            <p class="eyebrow"><span></span>Yang perlu diketahui</p>
+            <h2 id="faq-title">Pertanyaan umum.</h2>
+            <p class="body-copy">Kumaphone membantu proses identifikasi awal. Hasilnya dapat dipakai sebagai panduan pemeriksaan, bukan pengganti pemeriksaan fisik.</p>
+          </div>
+          <div class="faq-list">
+            <details data-reveal style="--reveal-index: 1;" open>
+              <summary>Bagaimana cara memulai diagnosis?<span>+</span></summary>
+              <p>Pilih menu Diagnosis, lalu jawab pertanyaan berdasarkan gejala yang benar-benar Anda temukan pada perangkat.</p>
+            </details>
+            <details data-reveal style="--reveal-index: 2;">
+              <summary>Apakah semua kerusakan bisa dikenali?<span>+</span></summary>
+              <p>Basis pengetahuan terus dikembangkan. Hasil terbaik diperoleh ketika gejala yang dipilih sesuai dengan kondisi perangkat.</p>
+            </details>
+            <details data-reveal style="--reveal-index: 3;">
+              <summary>Apakah Kumaphone dapat digunakan gratis?<span>+</span></summary>
+              <p>Ya. Anda dapat menggunakan fitur diagnosis sebagai panduan awal tanpa biaya.</p>
+            </details>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><img src="img/logo.png" alt="" width="30" height="30"><span>Kumaphone</span></a><p>Diagnosis awal yang membantu teknisi bekerja lebih terarah.</p><div><a href="about.php">Tentang</a><a href="login.html">Admin</a></div><small>© <span id="year"></span> Kumaphone</small></div></footer>
-    <script>const toggle=document.querySelector('.menu-toggle'),menu=document.querySelector('#primary-menu');toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));menu.classList.toggle('is-open',!open)});document.querySelector('#year').textContent=new Date().getFullYear();</script>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="index.html">
+          <img src="img/logo.png" alt="" width="30" height="30">
+          <span>Kumaphone</span>
+        </a>
+        <p>Diagnosis awal yang membantu teknisi bekerja lebih terarah.</p>
+        <div>
+          <a href="about.php">Tentang</a>
+          <a href="tracking.php">Lacak Status</a>
+          <a href="login.html">Admin</a>
+        </div>
+        <small>© <span id="year"></span> Kumaphone</small>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile navigation toggle
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('#primary-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          const open = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!open));
+          menu.classList.toggle('is-open', !open);
+        });
+      }
+
+      // Dynamic year
+      const yearEl = document.querySelector('#year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // Sticky header scroll elevation
+      const header = document.querySelector('.site-header');
+      if (header) {
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              header.classList.toggle('is-scrolled', window.scrollY > 15);
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+      }
+
+      // High-performance scroll reveal via IntersectionObserver
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('[data-reveal]').forEach(el => {
+          revealObserver.observe(el);
+        });
+      } else {
+        // Fallback for older browsers
+        document.querySelectorAll('[data-reveal]').forEach(el => {
+          el.classList.add('is-revealed');
+        });
+      }
+    </script>
   </body>
 </html>

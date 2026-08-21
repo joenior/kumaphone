@@ -1,0 +1,369 @@
+/* =========================================================
+   KUMAPHONE TRACKING PAGE STYLES
+   ========================================================= */
+
+.tracking-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tracking-page main {
+  flex: 1;
+}
+
+.tracking-hero {
+  padding: 3rem 0 4.5rem;
+  background: linear-gradient(115deg, var(--paper) 55%, var(--mist) 55%);
+}
+
+.tracking-header {
+  max-width: 780px;
+}
+
+.tracking-header h1 {
+  margin: 0.3rem 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.tracking-header p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+.tracking-workspace {
+  padding: 3rem 0 6rem;
+}
+
+.search-box-card {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 8px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 16px 36px rgba(13, 27, 42, 0.15);
+  margin-bottom: 3.5rem;
+}
+
+.search-box-card .eyebrow {
+  color: var(--lime);
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.search-input-wrap {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--lime);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.search-input::placeholder {
+  color: #8b9692;
+  font-family: var(--display);
+}
+
+.btn-search {
+  padding: 1rem 2rem;
+  background: var(--lime);
+  color: var(--ink);
+  border: none;
+  border-radius: 6px;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-search:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.search-hints {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: #a7b7b1;
+  flex-wrap: wrap;
+}
+
+.search-hints code {
+  color: var(--lime);
+  background: rgba(182, 204, 120, 0.15);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Result Cards */
+.tracking-results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tracking-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2.2rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tracking-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 8px 30px rgba(47, 115, 91, 0.08);
+}
+
+.tracking-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.reg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--green);
+  background: rgba(47, 115, 91, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.tracking-card-header .date-text {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.tracking-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  background: #f8fafc;
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #edf2f7;
+}
+
+.info-item label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.info-item span {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.tracking-diagnosis-box {
+  background: #f4fbf7;
+  border: 1.5px solid var(--green);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tracking-diagnosis-box .label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.tracking-diagnosis-box h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.tracking-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tracking-actions {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.btn-pdf-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  background: var(--green);
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-pdf-track:hover {
+  background: #245a47;
+}
+
+.btn-detail-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-detail-track:hover {
+  background: var(--green);
+  color: #ffffff;
+}
+
+/* Guide Steps */
+.tracking-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.step-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.8rem;
+}
+
+.step-number {
+  font-family: var(--mono);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.step-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .tracking-hero {
+    background: var(--paper);
+    padding-bottom: 2.5rem;
+  }
+
+  .search-box-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .btn-search {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tracking-info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .tracking-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tracking-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn-pdf-track, .btn-detail-track {
+    justify-content: center;
+  }
+
+  .tracking-steps {
+    grid-template-columns: 1fr;
+  }
+}

@@ -7,10 +7,16 @@
 require_once 'session.php';
 requireAdmin();
 
-$activeMenu = 'beranda';
+$activeMenu = 'histori';
 $adminName  = getAdminName($db) ?? 'Admin';
 
-$historyList = fetchAll($db, "SELECT * FROM smartphones");
+$historyList = fetchAll(
+    $db,
+    "SELECT s.*, k.namakerusakan
+     FROM smartphones s
+     LEFT JOIN kerusakan k ON s.idkerusakan = k.idkerusakan
+     ORDER BY s.id DESC"
+);
 ?>
 <!doctype html>
 <html lang="id">
@@ -35,37 +41,56 @@ $historyList = fetchAll($db, "SELECT * FROM smartphones");
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Histori Pengecekan</h1>
-                <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-toolbar mb-2 mb-md-0 d-flex gap-2">
+                    <a href="cetak_histori.php" target="_blank" class="btn btn-sm btn-primary">
+                        <i class="bi bi-printer-fill"></i> Cetak Rekapitulasi (PDF)
+                    </a>
                     <form method="post" action="deletehistori.php" onsubmit="return confirm('Yakin ingin menghapus semua data histori?')">
                         <?= csrfField() ?>
                         <button type="submit" class="btn btn-sm btn-outline-danger">
-                            <b class="bi bi-person-x-fill"> Hapus semua data</b>
+                            <b class="bi bi-trash-fill"> Hapus semua data</b>
                         </button>
                     </form>
                 </div>
             </div>
 
             <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <thead>
+                <table class="table table-bordered table-striped align-middle">
+                    <thead class="table-dark">
                         <tr>
-                            <th>NO</th>
+                            <th style="width: 4%;">NO</th>
+                            <th style="width: 15%;">No. Registrasi</th>
                             <th>Nama Customer</th>
                             <th>Brand &amp; Model</th>
                             <th>IMEI</th>
                             <th>Sistem Operasi</th>
-                            <th>ID Kerusakan</th>
+                            <th>Hasil Diagnosa</th>
+                            <th style="width: 13%; text-align: center;">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php if (empty($historyList)): ?>
+                        <tr>
+                            <td colspan="8" class="text-center text-muted py-4">Belum ada data histori pengecekan.</td>
+                        </tr>
+                        <?php endif; ?>
                         <?php foreach ($historyList as $index => $row): ?>
                         <tr>
                             <td><?= $index + 1 ?></td>
-                            <td><?= escape($row['brand'] ?? '') ?></td>
+                            <td><span class="badge bg-dark font-monospace"><?= escape($row['no_registrasi'] ?? '-') ?></span></td>
+                            <td><strong><?= escape($row['brand'] ?? '') ?></strong></td>
                             <td><?= escape($row['model'] ?? '') ?></td>
-                            <td><?= escape($row['imei'] ?? '') ?></td>
-                            <td><?= escape($row['jenishp'] ?? '') ?></td>
-                            <td><?= escape($row['idkerusakan'] ?? '') ?></td>
+                            <td><code><?= escape($row['imei'] ?? '') ?></code></td>
+                            <td><span class="badge bg-secondary"><?= escape($row['jenishp'] ?? '') ?></span></td>
+                            <td>
+                                <span class="badge bg-success"><?= escape($row['idkerusakan'] ?? '') ?></span>
+                                <?= escape($row['namakerusakan'] ?? '') ?>
+                            </td>
+                            <td class="text-center">
+                                <a href="cetak_diagnosa.php?id=<?= (int)$row['id'] ?>" target="_blank" class="btn btn-sm btn-outline-primary" title="Cetak Lembar Diagnosa">
+                                    <i class="bi bi-file-earmark-pdf-fill"></i> Cetak PDF
+                                </a>
+                            </td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>

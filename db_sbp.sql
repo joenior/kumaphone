@@ -165,12 +165,15 @@ INSERT INTO `basispengetahuan` (`namakerusakan`, `gejala`) VALUES
 
 CREATE TABLE `smartphones` (
   `id` int NOT NULL AUTO_INCREMENT,
+  `no_registrasi` varchar(30) DEFAULT NULL,
   `brand` varchar(255) NOT NULL,
   `model` varchar(255) NOT NULL,
   `imei` varchar(255) NOT NULL,
   `jenishp` varchar(255) NOT NULL,
   `idkerusakan` varchar(20) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_no_registrasi` (`no_registrasi`),
   KEY `fk_idkerusakan` (`idkerusakan`),
   CONSTRAINT `fk_idkerusakan` FOREIGN KEY (`idkerusakan`) REFERENCES `kerusakan` (`idkerusakan`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -179,17 +182,17 @@ CREATE TABLE `smartphones` (
 -- Dumping data for table `smartphones` (Dummy Data Riwayat Pelanggan)
 --
 
-INSERT INTO `smartphones` (`id`, `brand`, `model`, `imei`, `jenishp`, `idkerusakan`) VALUES
-(1, 'Dimas Setiawan', 'Samsung Galaxy A52', '354892104829104', 'Android', 'K3'),
-(2, 'Siti Nurhaliza', 'Xiaomi Redmi Note 11 Pro', '862910492817401', 'Android', 'K2'),
-(3, 'Ahmad Fauzi', 'Oppo Reno 7 5G', '358291048172901', 'Android', 'K6'),
-(4, 'Rian Hidayat', 'Poco X3 Pro', '863920194827103', 'Android', 'K4'),
-(5, 'Nurul Aini', 'Vivo Y21s', '352910482719204', 'Android', 'K5'),
-(6, 'Bayu Pratama', 'Realme GT Master Edition', '861920482910482', 'Android', 'K7'),
-(7, 'Mega Utami', 'Samsung Galaxy S21 Ultra', '359102948201948', 'Android', 'K1'),
-(8, 'Hendro Wijaya', 'Infinix Note 12', '864920194820192', 'Android', 'K8'),
-(9, 'Fitri Handayani', 'Xiaomi Poco F4', '863019284910294', 'Android', 'K9'),
-(10, 'Fajar Nugraha', 'Oppo A74', '358192048102948', 'Android', 'K6');
+INSERT INTO `smartphones` (`id`, `no_registrasi`, `brand`, `model`, `imei`, `jenishp`, `idkerusakan`, `created_at`) VALUES
+(1, 'KMP-20240910-0001', 'Dimas Setiawan', 'Samsung Galaxy A52', '354892104829104', 'Android', 'K3', '2024-09-10 09:30:00'),
+(2, 'KMP-20240915-0002', 'Siti Nurhaliza', 'Xiaomi Redmi Note 11 Pro', '862910492817401', 'Android', 'K2', '2024-09-15 11:15:00'),
+(3, 'KMP-20240922-0003', 'Ahmad Fauzi', 'Oppo Reno 7 5G', '358291048172901', 'Android', 'K6', '2024-09-22 14:00:00'),
+(4, 'KMP-20241001-0004', 'Rian Hidayat', 'Poco X3 Pro', '863920194827103', 'Android', 'K4', '2024-10-01 10:20:00'),
+(5, 'KMP-20241018-0005', 'Nurul Aini', 'Vivo Y21s', '352910482719204', 'Android', 'K5', '2024-10-18 16:45:00'),
+(6, 'KMP-20241025-0006', 'Bayu Pratama', 'Realme GT Master Edition', '861920482910482', 'Android', 'K7', '2024-10-25 13:10:00'),
+(7, 'KMP-20241105-0007', 'Mega Utami', 'Samsung Galaxy S21 Ultra', '359102948201948', 'Android', 'K1', '2024-11-05 15:30:00'),
+(8, 'KMP-20241112-0008', 'Hendro Wijaya', 'Infinix Note 12', '864920194820192', 'Android', 'K8', '2024-11-12 09:50:00'),
+(9, 'KMP-20241120-0009', 'Fitri Handayani', 'Xiaomi Poco F4', '863019284910294', 'Android', 'K9', '2024-11-20 17:05:00'),
+(10, 'KMP-20241201-0010', 'Fajar Nugraha', 'Oppo A74', '358192048102948', 'Android', 'K6', '2024-12-01 11:40:00');
 
 -- --------------------------------------------------------
 
